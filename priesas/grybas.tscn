@@ -703,8 +703,11 @@ _data = {
 [node name="grybas" instance=ExtResource("1_u67v3")]
 script = ExtResource("2_xkidf")
 
+[node name="CollisionShape2D" parent="." index="0"]
+visible = true
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="3"]
-position = Vector2(5, -29)
+position = Vector2(6, -28)
 scale = Vector2(0.744922, 0.904785)
 sprite_frames = SubResource("SpriteFrames_tohk8")
 animation = &"Idle"

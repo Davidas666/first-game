@@ -13,7 +13,7 @@ func _physics_process(delta):
 		velocity.x = 0
 	move_and_slide()
 
-func _on_detector_body_entered(body):
+func _on_detector_body_entered(_body):
 	if is_on_floor():
 		var tween = get_tree().create_tween()
 		tween.parallel().tween_property(self, "velocity", Vector2(0,-150), 0.3)

@@ -186,5 +186,5 @@ func die_state():
 
 
 
-func _on_hit_box_area_entered(area):
+func _on_hit_box_area_entered(_area):
 	Signals.emit_signal("player_attack", Global1.player_demage)

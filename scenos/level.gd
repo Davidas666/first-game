@@ -39,7 +39,7 @@ func _ready():
 	$CanvasLayer/shop11.visible = false
 	$CanvasLayer/shopmyg.visible = false
 
-func _process(delta):
+func _process(_delta):
 	match state:
 		MORNING:
 			morning_state()
@@ -92,11 +92,11 @@ func _on_checkhp_timeout():
 
 
 
-func _on_shop_area_entered(area):
+func _on_shop_area_entered(_area):
 	$CanvasLayer/shopmyg.visible = true
 
 
 
 
-func _on_shop_area_exited(area):
+func _on_shop_area_exited(_area):
 	$CanvasLayer/shopmyg.visible = false

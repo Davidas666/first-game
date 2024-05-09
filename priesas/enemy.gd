@@ -55,13 +55,13 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func on_damage_received(damage):
-	var player_demage = damage
+	var _player_demage = damage
 
 func _on_player_position_update(player_poss):
 	player = player_poss
 	
 
-func _on_attack_range_body_entered(body):
+func _on_attack_range_body_entered(_body):
 	state = ATTACK
 
 func idle_state():
@@ -112,7 +112,7 @@ func recover_state():
 
 
 
-func _on_hit_box_area_entered(area):
+func _on_hit_box_area_entered(_area):
 	Signals.emit_signal("enemy_attack", demage)
 
 

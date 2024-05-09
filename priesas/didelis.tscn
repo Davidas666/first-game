@@ -577,7 +577,7 @@ script = ExtResource("2_tndnh")
 visible = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="3"]
-position = Vector2(6.09296, -20.1934)
+position = Vector2(6, -17)
 scale = Vector2(0.374032, 0.418854)
 sprite_frames = SubResource("SpriteFrames_5tvql")
 animation = &"recover"

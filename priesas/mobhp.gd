@@ -25,7 +25,7 @@ func _on_demage_received(player_demage1):
 	player_dmg = player_demage1
 
 
-func _on_hurt_box_area_entered(area):
+func _on_hurt_box_area_entered(_area):
 	await get_tree().create_timer(0.1).timeout
 	hp -=Global1.player_demage
 	demagetext.text = str(Global1.player_demage)
