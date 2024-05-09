@@ -1,0 +1,151 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccu68g16l4ghr"]
+
+[ext_resource type="Texture2D" uid="uid://ikt2gdv0vbri" path="res://UI/PNG/Upgrade/HP_Icon.png" id="1_n31fn"]
+[ext_resource type="Texture2D" uid="uid://c3r4sfthrkg2d" path="res://oak_woods_v1.0/decorations/sign.png" id="3_w5her"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5huss"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 55
+corner_radius_top_right = 55
+corner_radius_bottom_right = 55
+corner_radius_bottom_left = 55
+shadow_color = Color(0.706564, 0.0973991, 0.445075, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5w87"]
+bg_color = Color(0.60214, 0.601261, 0.585115, 1)
+
+[node name="shop11" type="Node2D"]
+scale = Vector2(0.835, 0.835)
+
+[node name="BG" type="Panel" parent="."]
+offset_left = 38.0
+offset_top = 35.0
+offset_right = 1094.0
+offset_bottom = 578.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5huss")
+
+[node name="zombi" type="Panel" parent="."]
+offset_left = 184.0
+offset_top = 96.0
+offset_right = 584.0
+offset_bottom = 208.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h5w87")
+
+[node name="HealthBig" type="Sprite2D" parent="zombi"]
+position = Vector2(72, 56)
+texture = ExtResource("1_n31fn")
+
+[node name="Label" type="Label" parent="zombi"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 8.0
+offset_right = 312.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 26
+text = "MAX HP =  300
+
+"
+
+[node name="300" type="Button" parent="zombi"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 49.0
+offset_right = 302.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 27
+text = "BUY FOR 500 G"
+
+[node name="zombi2" type="Panel" parent="."]
+offset_left = 196.407
+offset_top = 258.683
+offset_right = 596.407
+offset_bottom = 370.683
+theme_override_styles/panel = SubResource("StyleBoxFlat_h5w87")
+
+[node name="HealthBig" type="Sprite2D" parent="zombi2"]
+position = Vector2(72, 56)
+texture = ExtResource("1_n31fn")
+
+[node name="Label" type="Label" parent="zombi2"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 8.0
+offset_right = 312.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 26
+text = "Heal +100hp"
+
+[node name="300" type="Button" parent="zombi2"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 49.0
+offset_right = 302.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 27
+text = "BUY FOR 100 G"
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 647.0
+offset_top = 96.0
+offset_right = 1047.0
+offset_bottom = 208.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h5w87")
+
+[node name="ManaNormal" type="Sprite2D" parent="Panel4"]
+position = Vector2(64, 56)
+texture = ExtResource("3_w5her")
+
+[node name="Label" type="Label" parent="Panel4"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 8.0
+offset_right = 312.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 35
+text = "X3 DEMAGE"
+
+[node name="100" type="Button" parent="Panel4"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 49.0
+offset_right = 354.0
+offset_bottom = 113.0
+theme_override_font_sizes/font_size = 30
+text = "BUY FOR 100 SKULL"
+
+[node name="Panel5" type="Panel" parent="."]
+offset_left = 645.509
+offset_top = 259.88
+offset_right = 1045.51
+offset_bottom = 371.88
+theme_override_styles/panel = SubResource("StyleBoxFlat_h5w87")
+
+[node name="ManaNormal" type="Sprite2D" parent="Panel5"]
+position = Vector2(64, 56)
+texture = ExtResource("3_w5her")
+
+[node name="Label" type="Label" parent="Panel5"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 8.0
+offset_right = 312.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 35
+text = "X2 DEMAGE"
+
+[node name="100" type="Button" parent="Panel5"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 49.0
+offset_right = 354.0
+offset_bottom = 113.0
+theme_override_font_sizes/font_size = 30
+text = "BUY FOR 10 SKULL"
+
+[node name="close" type="Button" parent="."]
+offset_left = 56.0
+offset_top = 48.0
+offset_right = 168.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 30
+text = "CLOSE"

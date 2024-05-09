@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw8yulp0i10j"]
+
+[ext_resource type="Texture2D" uid="uid://easkp8l1k1qj" path="res://oak_woods_v1.0/decorations/The Old Shop.png" id="1_bva0k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7dte"]
+size = Vector2(93, 128)
+
+[node name="shop" type="Area2D"]
+light_mask = 32
+visibility_layer = 64
+collision_layer = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 32
+visibility_layer = 64
+position = Vector2(-2.5, -8)
+shape = SubResource("RectangleShape2D_o7dte")
+
+[node name="TheOldShop" type="Sprite2D" parent="."]
+position = Vector2(-3.5, -8)
+scale = Vector2(1.22549, 1.2549)
+texture = ExtResource("1_bva0k")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]

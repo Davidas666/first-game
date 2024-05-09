@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://2fceear0oiw5"]
+
+[ext_resource type="FontFile" uid="uid://dcjs1eyx4px7i" path="res://new_theme/ThaleahFat.ttf" id="1_346cl"]
+[ext_resource type="Texture2D" uid="uid://de7ft5amkagyx" path="res://UI/PNG/Shop/Table_01.png" id="1_rvbha"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0p46w"]
+texture = ExtResource("1_rvbha")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 17.0
+
+[resource]
+default_font = ExtResource("1_346cl")
+default_font_size = 13
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_0p46w")

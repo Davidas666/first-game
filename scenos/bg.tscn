@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://be5yl2i7ri4dk"]
+
+[ext_resource type="Script" path="res://scenos/bg.gd" id="1_2e3bs"]
+[ext_resource type="Texture2D" uid="uid://dku4exxwp8f20" path="res://oak_woods_v1.0/background/1.png" id="2_fk4jt"]
+[ext_resource type="Texture2D" uid="uid://be5kiv10qe027" path="res://oak_woods_v1.0/background/2.png" id="3_qj6ha"]
+[ext_resource type="Texture2D" uid="uid://dfqqwk4o877dr" path="res://vilnius/photo_2024-05-02_12-02-58.png" id="4_f7mq5"]
+[ext_resource type="Texture2D" uid="uid://cr7meomcxwdv6" path="res://vilnius/дддд05-13.png" id="6_b3erk"]
+[ext_resource type="Texture2D" uid="uid://blppw85vibo1d" path="res://oak_woods_v1.0/background/4.png" id="8_ni2sa"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_2e3bs")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1150, 0)
+
+[node name="1" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(577, 274.5)
+scale = Vector2(1.99653, 2.29938)
+texture = ExtResource("2_fk4jt")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1150, 0)
+
+[node name="2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(578.5, 322.5)
+scale = Vector2(1.99479, 2.00309)
+texture = ExtResource("3_qj6ha")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1150, 0)
+
+[node name="Photo2024-05-0212-02-58" type="Sprite2D" parent="ParallaxLayer3"]
+visible = false
+position = Vector2(573.5, 324.75)
+scale = Vector2(0.903906, 0.909028)
+texture = ExtResource("4_f7mq5")
+
+[node name="Дддд05-13" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(572.5, 328)
+scale = Vector2(0.899219, 0.9)
+texture = ExtResource("6_b3erk")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1150, 0)
+
+[node name="4" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(576.5, 324.5)
+scale = Vector2(2.00174, 2.00309)
+texture = ExtResource("8_ni2sa")

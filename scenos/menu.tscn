@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjqd2yv1yocrf"]
+
+[ext_resource type="Script" path="res://scenos/menu.gd" id="1_wastd"]
+[ext_resource type="PackedScene" uid="uid://be5yl2i7ri4dk" path="res://scenos/bg.tscn" id="2_frnkh"]
+[ext_resource type="Texture2D" uid="uid://drds73oa76fnl" path="res://UI/PNG/Main_Menu/Start_BTN.png" id="3_1vwy4"]
+[ext_resource type="Texture2D" uid="uid://cnmvrwecxotv2" path="res://UI/PNG/Main_Menu/Exit_BTN.png" id="4_xa842"]
+
+[node name="Menu" type="Node2D"]
+show_behind_parent = true
+top_level = true
+script = ExtResource("1_wastd")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 346.0
+offset_top = 172.0
+offset_right = 751.0
+offset_bottom = 293.0
+
+[node name="StartBtn" type="Sprite2D" parent="TextureButton"]
+position = Vector2(201, 61)
+texture = ExtResource("3_1vwy4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 3)
+anchor_mode = 0
+
+[node name="ExitBtn" type="Sprite2D" parent="."]
+position = Vector2(556, 407)
+texture = ExtResource("4_xa842")
+
+[node name="exitbtn" type="TextureButton" parent="."]
+offset_left = 357.0
+offset_top = 345.0
+offset_right = 752.0
+offset_bottom = 462.0
+
+[node name="BG" parent="." instance=ExtResource("2_frnkh")]
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="exitbtn" to="." method="_on_exitbtn_pressed"]

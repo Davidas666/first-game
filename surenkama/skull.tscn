@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxm415r3g00jl"]
+
+[ext_resource type="Script" path="res://surenkama/skull.gd" id="1_dq5ng"]
+[ext_resource type="Texture2D" uid="uid://b3j3jqors8nqe" path="res://buil/Skull.png" id="1_kjfuy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pat2e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vma47"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kjfuy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ne7b"]
+radius = 13.8409
+
+[node name="skull" type="CharacterBody2D"]
+scale = Vector2(0.64, 0.64)
+collision_layer = 0
+script = ExtResource("1_dq5ng")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pat2e")
+
+[node name="skull" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.78125, -1.5625)
+scale = Vector2(0.830078, 0.78125)
+sprite_frames = SubResource("SpriteFrames_vma47")
+
+[node name="skulldetec" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="skulldetec"]
+shape = SubResource("CircleShape2D_8ne7b")
+
+[connection signal="body_entered" from="skulldetec" to="." method="_on_detector_body_entered"]

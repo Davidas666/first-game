@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvlg3mg3atuup"]
+
+[ext_resource type="Texture2D" uid="uid://rdlkxa03doxj" path="res://Gold/Gold_1.png" id="1_kmsis"]
+[ext_resource type="Script" path="res://surenkama/resursai.gd" id="1_m1nho"]
+[ext_resource type="Texture2D" uid="uid://b3j3jqors8nqe" path="res://buil/Skull.png" id="2_nf6lc"]
+[ext_resource type="Texture2D" uid="uid://bofrhhrm4y5i8" path="res://buil/Slime Gel.png" id="3_8xo54"]
+[ext_resource type="Texture2D" uid="uid://to1pgqyxl20m" path="res://buil/Bone.png" id="4_i68yr"]
+
+[sub_resource type="Theme" id="Theme_4wfli"]
+
+[node name="resursai" type="CanvasLayer"]
+script = ExtResource("1_m1nho")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.306
+anchor_right = 0.694
+anchor_bottom = 0.066
+offset_left = -0.512024
+offset_top = -3.0
+offset_right = 0.511963
+offset_bottom = 0.231998
+grow_horizontal = 2
+theme = SubResource("Theme_4wfli")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 562.0
+offset_right = 20.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer"]
+layout_mode = 2
+
+[node name="gold" type="TextureRect" parent="Control/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_kmsis")
+expand_mode = 2
+
+[node name="goldtxt" type="Label" parent="Control/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="skull" type="TextureRect" parent="Control/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_nf6lc")
+expand_mode = 2
+
+[node name="skulltxt" type="Label" parent="Control/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="slim" type="TextureRect" parent="Control/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_8xo54")
+expand_mode = 2
+
+[node name="slimetxt" type="Label" parent="Control/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="bone" type="TextureRect" parent="Control/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_i68yr")
+expand_mode = 2
+
+[node name="bonetxt" type="Label" parent="Control/PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 50
+text = "0"

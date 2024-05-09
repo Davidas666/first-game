@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfjtqxn0431il"]
+
+[ext_resource type="Texture2D" uid="uid://ij105jqcn7om" path="res://priesas/Mushroom with VFX/mob_healt_empty.png" id="1_g0kao"]
+[ext_resource type="Script" path="res://priesas/mobhp.gd" id="1_qwra4"]
+[ext_resource type="Texture2D" uid="uid://d02bh4io2wg16" path="res://priesas/Mushroom with VFX/mob_healt_progress.png" id="2_xybco"]
+
+[sub_resource type="Animation" id="Animation_7yonv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("demagetext:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23, -77)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("demagetext:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_v0e1j"]
+resource_name = "demage_txt"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("demagetext:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-23, -77), Vector2(-22, -176)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("demagetext:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_i6mor"]
+resource_name = "txt"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d6e2q"]
+_data = {
+"RESET": SubResource("Animation_7yonv"),
+"demage_txt": SubResource("Animation_v0e1j"),
+"txt": SubResource("Animation_i6mor")
+}
+
+[node name="Mobhp" type="Node2D"]
+script = ExtResource("1_qwra4")
+
+[node name="hpbar" type="TextureProgressBar" parent="."]
+offset_left = -112.0
+offset_top = -20.0
+offset_right = 111.0
+offset_bottom = 19.0
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_g0kao")
+texture_progress = ExtResource("2_xybco")
+tint_progress = Color(0.691111, 0.0950274, 0.282369, 1)
+
+[node name="demagetext" type="Label" parent="."]
+offset_left = -23.0
+offset_top = -77.0
+offset_right = 199.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(0.730178, 0.0643077, 0.314342, 1)
+theme_override_font_sizes/font_size = 221
+text = "20
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_d6e2q")
+}
